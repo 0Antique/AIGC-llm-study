@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/diffusion/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#7425b6",
+    "navigationBarTitleText": "AI画画",
+    "navigationBarTextStyle":"white"
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

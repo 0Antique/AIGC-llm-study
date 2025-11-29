@@ -1,0 +1,30 @@
+<view class="container" style="width: 750rpx; height: 1229rpx; display: flex; box-sizing: border-box">
+  <div class="form-item" style="width: 673rpx; height: 70rpx; display: block; box-sizing: border-box">
+    <input style="width: 470rpx; height: 60rpx; display: block; box-sizing: border-box" placeholder="写下你的创意" class="input" maxlength='1024' bindinput="handlerInput" />
+    <!-- <input style="width: 470rpx; height: 57rpx; display: block; box-sizing: border-box" placeholder="待融合URL" class="input" bindinput="handlerInputFusion" /> -->
+    <button class="button" disabled="{{loading}}" loading="{{loading}}" bindtap="handlerSearch" size="mini" style="width: 199rpx; height: 80rpx; line-height: 110rpx; display: block; box-sizing: border-box; left: 0rpx; top: -10rpx; position: relative">生成</button>
+  </div>
+  <view class="tr bg-w">
+    <view class="th" style="position: relative; left: 0rpx; top: -114rpx">总任务数</view>
+    <view class="th" style="position: relative; left: 0rpx; top: -114rpx">队列长度</view>
+    <view class="th " style="position: relative; left: 0rpx; top: -114rpx">任务状态</view>
+    <view class="th " style="position: relative; left: 0rpx; top: -114rpx">预估时间</view>
+  </view>
+  <view class="tr bg-w" style="position: relative; left: 3rpx; top: -271rpx">
+    <view class="td">{{totalTask}}</view>
+  	<view class="td">{{queueLen}}</view>
+  	<view class="td">{{taskStatus}}</view>
+  	<view class="td">{{processTime}}/{{leftTime}}s</view>
+  </view>
+
+  <view class="text_line" style="width: 673rpx; height: 454rpx; display: block; box-sizing: border-box; position: relative; left: 3rpx; top: -429rpx">作品图
+  <canvas type="2d" id="input_canvas" style="background: rgb(143, 143, 132); width: 673rpx; height: 400rpx; position: relative; left: 2rpx; top: 0rpx; display: block; box-sizing: border-box">
+  </canvas>
+  
+  <!-- <text class="text_line">融合后</text>
+<canvas type="2d" id="input_canvas_fusion" style="background: rgb(228, 228, 225); width: 673rpx; height: 400rpx; position: relative; left: 2rpx; top: 0rpx; display: block; box-sizing: border-box">
+  </canvas> -->
+
+  </view>
+  
+</view>

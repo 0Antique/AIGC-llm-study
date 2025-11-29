@@ -1,0 +1,23 @@
+<view class="container" >
+  <div class="form-item" style="width: 673rpx; height: 70rpx; display: block; box-sizing: border-box">
+    <input placeholder="写下你的创意" maxlength='1024' class="input" bindinput="handlerInput" />
+    <button class="button" loading="{{buttonStatus}}" bindtap="handlerSearch" size="mini" style="width: 158rpx; height: 64rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: relative"> 立即生成 </button>
+  </div>
+  <view class="text_box">
+    <text class="text_line">关键词</text>
+  </view>
+  <view class="view_line">
+    <view class="hot_txt" wx:for="{{tags}}" wx:key="histxt"> 
+      <view bindtap="clickItem" data-bean="{{item}}">
+        <view>{{item[0]}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="output_line" style="position: relative; left: 0rpx; top: 50rpx; width: 714rpx; height: 58rpx; display: flex; box-sizing: border-box">
+    <text class="text_line" style="width: 99rpx; height: 30rpx; display: block; box-sizing: border-box; position: relative; left: 9rpx; top: -9rpx">作品图</text>
+    <view style="position: relative; left: -15rpx; top: 2rpx; width: 571rpx; height: 0rpx; display: block; box-sizing: border-box"></view>
+  </view>
+  <canvas type="2d" id="input_canvas" style="background: rgb(228, 228, 225); width: 673rpx; height: 700rpx; position: relative; left: 2rpx; top: 80rpx; display: block; box-sizing: border-box">
+  </canvas>
+</view>
