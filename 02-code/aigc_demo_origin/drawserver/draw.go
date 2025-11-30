@@ -67,8 +67,9 @@ func run(req *JobInfo) {
 
 //设置腾讯云的密钥和ID
 	credential := common.NewCredential(     
-            "",
-            "",
+		//输入ID和KEY
+		"",
+		"",
         )
     // 实例化一个client选项，可选的，没有特殊需求可以跳过
     cpf := profile.NewClientProfile()
