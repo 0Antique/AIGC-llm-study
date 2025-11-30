@@ -65,21 +65,24 @@ func run(req *JobInfo) {
 	// 	return
 	// }
 
-	credential := common.NewCredential(
-                "****",
-                "****",
+//设置腾讯云的密钥和ID
+	credential := common.NewCredential(     
+            "",
+            "",
         )
     // 实例化一个client选项，可选的，没有特殊需求可以跳过
     cpf := profile.NewClientProfile()
     cpf.HttpProfile.Endpoint = "aiart.tencentcloudapi.com"
     // 实例化要请求产品的client对象,clientProfile是可选的
-    client, _ := aiart.NewClient(credential, "ap-guangzhou", cpf)
+    client, _ := aiart.NewClient(credential, "ap-上海", cpf)
 
     // 实例化一个请求对象,每个接口都会对应一个request对象
     request := aiart.NewTextToImageRequest()
+    // 图片的分辨率
     request.ResultConfig = &aiart.ResultConfig {
                 Resolution: common.StringPtr("1024:768"),
         }
+    // 返回的图片格式 
     request.RspImgType = common.StringPtr("base64")
     request.Prompt = common.StringPtr(req.Prompt)
 
